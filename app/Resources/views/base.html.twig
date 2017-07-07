@@ -3,11 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}" />
+        {% block stylesheets %}{% endblock %}       
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <nav>
+            <div class="nav-wrapper">
+                <span class="brand-logo">SupChat!</span>
+                <ul class="right hide-on-med-and-down">
+                    <li>?</li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+        <script type="text/javascript">
+            var _WS_URI = "ws://{{ gos_web_socket_server_host  }}:{{ gos_web_socket_server_port  }}";
+        </script>
+        <script type="text/javascript" src="{{ mix('/js/manifest.js') }}"></script>       
+        <script type="text/javascript" src="{{ mix('/js/vendor.js') }}"></script>
+        <script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

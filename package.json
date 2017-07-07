@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "webpack": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hmr": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.1",
+    "jquery": "^3.2.1",
+    "laravel-mix": "^0.11.4",
+    "lodash": "^4.16.2",
+    "purifycss-webpack": "^0.7.0"
+  },
+  "dependencies": {
+    "autobahn": "^17.5.2",
+    "font-awesome": "^4.7.0",
+    "materialize-css": "^0.99.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-materialize": "^1.0.3"
+  }
+}

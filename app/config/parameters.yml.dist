@@ -17,3 +17,11 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    # Elixir Mix Bundle
+    web_dir: '%kernel.root_dir%/../web'
+
+    # GOS Web Socket (Ratchet)
+    web_socket_port: 8080
+    web_socket_host: 127.0.0.1
+

@@ -67,3 +67,13 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+# Elixir Mix Bundle
+iulyanp_elixir_mix:
+    web_dir: "%web_dir%"
+
+# GOS  Web Socket (Ratchet)
+gos_web_socket:
+    server:
+        port: '%web_socket_port%'
+        host: '%web_socket_host%' 
